@@ -10,9 +10,11 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseMotionListener;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
@@ -26,15 +28,18 @@ import javax.swing.event.ChangeListener;
  *
  * @author lhries
  */
-class CalculadoraMenuItem extends JFrame{
+class CalculadoraComboBox extends JFrame{
     private JLabel labelNumero1, labelNumero2, labelResultado;
     private JTextField textoNumero1, textoNumero2, textoResultado;
     private JButton botaoCalcular, botaoZerar;
     private JPanel painelBotoes, painelPrincipal, painelNum1, painelNum2, painelRes;
-    private JMenuItem somar, subtrair, multiplicar, dividir, escolha;
+    private JComboBox somar, subtrair, multiplicar, dividir, escolha;
     
-    public CalculadoraMenuItem() {
-        super ("Calculadora Menu");
+    String[] operacoes={"Soma","Multiplicação","Divisão","Subtração"}; 
+    JComboBox box = new JComboBox(operacoes);
+    
+    public CalculadoraComboBox() {
+        super ("Calculadora ComboBox");
         
         iniciarComponentes();
         
@@ -85,18 +90,35 @@ class CalculadoraMenuItem extends JFrame{
         painelBotoes.add(botaoZerar);
         getContentPane().add(painelBotoes, BorderLayout.SOUTH);
       //__________________________________________________________________
-  
-       escolha.add(somar);
-
+ 
        
+        
+//        somar = new JComboBox();
+//        subtrair = new JComboBox();
+//        multiplicar = new JComboBox();
+//        dividir = new JComboBox();
+//        
+//        box.add(somar);
+//        box.add(subtrair);
+//        box.add(dividir);
+//        box.add(multiplicar);
+       
+       
+        
+        
 
-        JPanel menuPanel = new JPanel ();
+        JPanel boxPanel = new JPanel ();
         
-        menuPanel.add (escolha);
-     
         
-        menuPanel.setLayout (new GridLayout (4, 1));
-        getContentPane().add(menuPanel, BorderLayout.CENTER);
+        
+        boxPanel.add(box);
+        
+        
+        
+        boxPanel.setLayout (new GridLayout (4, 1));
+        getContentPane().add(boxPanel, BorderLayout.CENTER);
+        
+       
       
         
         
@@ -105,45 +127,54 @@ class CalculadoraMenuItem extends JFrame{
     
     public class TratarMenu implements ActionListener {
 
-    	@Override
+    	
+
+		@Override
     	public void actionPerformed(ActionEvent e) {
     		// TODO Auto-generated method stub
-    		if(e.getSource().equals(somar)){
+    		
+    		if(e.getSource().equals(botaoCalcular)){
     			try{ 
+    				if(box.getSelectedIndex()==0){
 	    			int num1 = Integer.parseInt(textoNumero1.getText());
 	                int num2 = Integer.parseInt(textoNumero2.getText());
 	                int resultado = num1+num2;
 	                textoResultado.setText(String.valueOf(resultado)); 
+    				}
     			}catch(NumberFormatException ex){
-                    JOptionPane.showMessageDialog(CalculadoraMenuItem.this, 
+                    JOptionPane.showMessageDialog(CalculadoraComboBox.this, 
                             "Campos Numero1 e Numero2 devem ser números inteiros",
                             "Erro de Formato",
                             JOptionPane.ERROR_MESSAGE);
                     ex.printStackTrace();
                 }
     		}
-    		if(e.getSource().equals(multiplicar)){
+    		if(e.getSource().equals(botaoCalcular)){
     			try{
+    				if(box.getSelectedIndex()==1){
 	    			int num1 = Integer.parseInt(textoNumero1.getText());
 	                int num2 = Integer.parseInt(textoNumero2.getText());
 	                int resultado = num1*num2;
-	                textoResultado.setText(String.valueOf(resultado));  
+	                textoResultado.setText(String.valueOf(resultado));
+    				}
     			}catch(NumberFormatException ex){
-                JOptionPane.showMessageDialog(CalculadoraMenuItem.this, 
+                JOptionPane.showMessageDialog(CalculadoraComboBox.this, 
                         "Campos Numero1 e Numero2 devem ser números inteiros",
                         "Erro de Formato",
                         JOptionPane.ERROR_MESSAGE);
                 ex.printStackTrace();
     			}
     		}
-    		if(e.getSource().equals(subtrair)){
+    		if(e.getSource().equals(botaoCalcular)){
     			try{
+    				if(box.getSelectedIndex()==2){
 	    			int num1 = Integer.parseInt(textoNumero1.getText());
 	                int num2 = Integer.parseInt(textoNumero2.getText());
-	                int resultado = num1-num2;
+	                int resultado = num1/num2;
 	                textoResultado.setText(String.valueOf(resultado));  
+    				}
     			}catch(NumberFormatException ex){
-                JOptionPane.showMessageDialog(CalculadoraMenuItem.this, 
+                JOptionPane.showMessageDialog(CalculadoraComboBox.this, 
                         "Campos Numero1 e Numero2 devem ser números inteiros",
                         "Erro de Formato",
                         JOptionPane.ERROR_MESSAGE);
@@ -151,14 +182,16 @@ class CalculadoraMenuItem extends JFrame{
     			}
     		}
     		
-    		if(e.getSource().equals(dividir)){
+    		if(e.getSource().equals(botaoCalcular)){
     			try{
+    				if(box.getSelectedIndex()==3){
 	    			int num1 = Integer.parseInt(textoNumero1.getText());
 	                int num2 = Integer.parseInt(textoNumero2.getText());
-	                int resultado = num1/num2;
+	                int resultado = num1-num2;
 	                textoResultado.setText(String.valueOf(resultado));  
+    				}
     			}catch(NumberFormatException ex){
-                JOptionPane.showMessageDialog(CalculadoraMenuItem.this, 
+                JOptionPane.showMessageDialog(CalculadoraComboBox.this, 
                         "Campos Numero1 e Numero2 devem ser números inteiros",
                         "Erro de Formato",
                         JOptionPane.ERROR_MESSAGE);
