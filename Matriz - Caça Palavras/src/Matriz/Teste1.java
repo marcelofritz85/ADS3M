@@ -1,5 +1,6 @@
 package Matriz;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Teste1 {
@@ -12,7 +13,8 @@ public class Teste1 {
 
 		
 		Scanner leia=new Scanner(System.in);
-
+		
+		
 		char m[][]= new char[20][20]; 
 		
 		int tamanho1;
@@ -21,17 +23,137 @@ public class Teste1 {
 		int x=0;
 		int linha=0;
 		int coluna1 = 3;
-	//________________________________________________________________
+	
 		int tamanho2;
 		String palavra2;
 	
 		int y=0;
-		int linha2=0;
+		int linha2=6;
 		int coluna2 = 3;
+		
+	//________________________________________________________________
+		
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][0]=temp7;
+		
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][1]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][2]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][3]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][4]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][5]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][6]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][7]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][8]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][9]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][10]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][11]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][12]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][13]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][14]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][15]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][16]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][17]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][18]=temp7;
+		}
+	for(int i=0; i<20;i++){
+		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
+		char temp7 = (templetras[new Random().nextInt(templetras.length)]);
+		m[i][19]=temp7;
+		}
+	
+	
+	
+	
+	 for(int i=0;i<m.length;i++){
+		 
+		 for(int j =0;j<m[i].length;j++){
+			System.out.print(m[i][j]+"|");				 
+		 }
+		 System.out.println();
+	 }
+	 
+	 System.out.println("_________________________________________");
+	 System.out.println("_________________________________________");
+	 System.out.println("_________________________________________");
 	//________________________________________________________________
 	while(x<3){	
 		System.out.println("Digite a palavra (horizontal)");
-		palavra=leia.nextLine();
+		palavra=leia.nextLine().toUpperCase();
+		
 		
 		tamanho1=palavra.length();
 		
@@ -43,15 +165,18 @@ public class Teste1 {
 			
 			
 		}
-		linha=linha+1;
-		coluna1=coluna1+3;
+		linha=linha+2;
+		coluna1=coluna1+5;
 		x=x+1;
 	
-	}//while	
+	}//while
+	
+	
+
 	//________________________________________________________________
 	while(y<3){	
 		System.out.println("Digite a palavra (vertical)");
-		palavra2=leia.nextLine();
+		palavra2=leia.nextLine().toUpperCase();
 		
 		tamanho2=palavra2.length();
 		
@@ -69,16 +194,22 @@ public class Teste1 {
 	
 	}//while
 	
+	
+	
 	//_______________________________________________________________
 	 for(int i=0;i<m.length;i++){
+		 System.out.print("|");
 		 
 		 for(int j =0;j<m[i].length;j++){
+			 
 			System.out.print(m[i][j]+"|");				 
 		 }
 		 System.out.println();
 	 }
-
+	//________________________________________________________________
 		 	
+
+	 
 
 
 	}
