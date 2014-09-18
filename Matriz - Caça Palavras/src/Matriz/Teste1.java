@@ -28,10 +28,6 @@ public class Teste1 {
 		int tamanho2;
 		String palavra2;
 	
-		int y=0;
-		int linha2 = 0;
-		int coluna2 = 0;
-		
 	
 //	for(int i=0; i<20;i++){
 //		char templetras[]={'a', 'b','c','d','e','f','g','h','i','j','l','m','n','o','p','q','r','s','t','u','v','x','z'};
