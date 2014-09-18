@@ -1,16 +1,14 @@
 package Formulario;
 
+
+
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.AbstractButton;
-import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
-import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -23,16 +21,14 @@ import javax.swing.event.ListDataListener;
 
 
 public class Crud extends JFrame {
-	   	//private JLabel label1;
+	   	private JLabel Pessoa1, Pessoa2;
 	    private JTextField principal, nome, idade;
 	    private JButton adicionar, remover, editar;
 	    private JPanel painelBotoes, painelPrincipal;
-	    //private JList pessoas;
-	    //JLabel label1 = new JLabel();
+	    private JList pessoas;
+	    
 	    DefaultListModel model = new DefaultListModel();
 	    JList lista = new JList(model);
-	   
-	    
 	    
 	    public Crud() {
 			super("Crud de Pessoas");
@@ -40,37 +36,23 @@ public class Crud extends JFrame {
 			iniciarComponentes();
 	        
 	        setDefaultCloseOperation(EXIT_ON_CLOSE);
-	        pack();
+	        //pack();
+	        setSize(300, 200);
+	        
 	        setVisible(true);
 		}
 
 		public void iniciarComponentes() {
 			// TODO Auto-generated method stub
-			//JFrame janela = new JFrame();
-			//janela.setSize(300, 200);
-			
-			
 			painelPrincipal = new JPanel();
-			
-			
-			
-			lista.setSize(300, 200);
-			
-			painelPrincipal.setSize(300, 200);
-			
-			
-			
-		 	
-			
-			
+			painelPrincipal.setLayout(new GridLayout(2,1));
 			
 			painelPrincipal.add(lista);
 			
 			
 			
-			getContentPane().add(painelPrincipal, BorderLayout.NORTH);
+			getContentPane().add(painelPrincipal);
 			
-			//janela.add(painelPrincipal);
 			
 			painelBotoes = new JPanel();
 			adicionar = new JButton("Adicionar");
@@ -83,13 +65,19 @@ public class Crud extends JFrame {
 			editar.addActionListener(new TratarBotoes1());
 			
 			remover = new JButton("Remover");
+			
+			
+			
+			
+			
+			
+			
+			
 			painelBotoes.add(remover);
+			remover.addActionListener(new TratarBotoes1());
 			
 			getContentPane().add(painelBotoes, BorderLayout.SOUTH);
 			
-			//janela.add(painelBotoes);
-			
-			//janela.setVisible(true);
 			
 		}
 		//___________________________________________________
@@ -104,9 +92,15 @@ public class Crud extends JFrame {
 				 }
 				if(e.getSource().equals(editar)){
 					//model.getListDataListeners();
+					model.removeElement(lista.getSelectedValue());
 					new Janela2();
 					
 				 }
+				if(e.getSource().equals(remover)){
+					//int index= lista.getSelectedIndex();
+					model.removeElement(lista.getSelectedValue());
+				}
+			
 			}
 
 		}
@@ -191,17 +185,18 @@ public class Crud extends JFrame {
 				       
 				        model.addElement("Pessoa: "+nomeRecebe+" Idade: "+idadeRecebe);
 						//cont=cont+1;
-						
+					
 						
 					 }
+				
 				}
 
 			}
 			
 			//___________________________________________________
 		    
-		}//Janela 2
-}//Crud    
+		}
+}    
 	    
 	
-				    
+				    				    
