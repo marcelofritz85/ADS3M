@@ -16,7 +16,9 @@ public class Teste1 {
 		
 		
 		char m[][]= new char[8][8]; 
-		int a=0;
+		int a=1;
+		int b=1;
+		int c=1;
 		
 		int tamanho1;
 		String palavra;
@@ -69,7 +71,7 @@ public class Teste1 {
 			
 			
 			
-			char v[]=new char[tamanho1];
+			//char v[]=new char[tamanho1];
 			
 			for(int i=0;i<tamanho1;i++){
 				
@@ -99,7 +101,7 @@ public class Teste1 {
 	 }
 	//________________________________________________________________
 	 System.out.println("4)");
-	 loop2:while(a<1){ System.out.println("Digite a palavra (vertical)");
+	 loop2:while(a==1){ System.out.println("Digite a palavra (vertical)");
 		palavra2=leia.nextLine().toUpperCase();
 		
 		if(palavra2.length()>8){
@@ -109,7 +111,7 @@ public class Teste1 {
 		
 		tamanho2=palavra2.length();
 		
-		char v1[]=new char[tamanho2];
+		//char v1[]=new char[tamanho2];
 		
 		for(int i=0;i<tamanho2;i++){
 			
@@ -117,16 +119,22 @@ public class Teste1 {
 			
 			
 		}
+		a=2;
 	 }//while
 	//________________________________________________________________
 	 
-	//while(y<3){	
+	 loop3:while(b==1){
 		System.out.println("Digite a palavra (vertical)");
 		palavra2=leia.nextLine().toUpperCase();
 		
+		if(palavra2.length()>8){
+			System.out.println("Informe a palavra com no maximo 8 letras! ");
+			continue loop3;
+		}
+		
 		tamanho2=palavra2.length();
 		
-		char v2[]=new char[tamanho2];
+		//char v2[]=new char[tamanho2];
 		
 		for(int i=0;i<tamanho2;i++){
 			
@@ -134,12 +142,17 @@ public class Teste1 {
 			
 			
 		}
-	
+		b=2;
+	 }
 		//_______________________________________________________________
-	 //System.out.println("4)");
-			//while(y<3){	
+		loop4:while(c==1){
 		System.out.println("Digite a palavra (vertical)");
 		palavra2=leia.nextLine().toUpperCase();
+		
+		if(palavra2.length()>8){
+			System.out.println("Informe a palavra com no maximo 8 letras! ");
+			continue loop4;
+		}
 				
 		tamanho2=palavra2.length();
 				
@@ -147,11 +160,12 @@ public class Teste1 {
 				
 		for(int i=0;i<tamanho2;i++){
 					
-			m[i][7]=palavra2.charAt(i);
+			m[i+1][7]=palavra2.charAt(i);
 					
 					
 		}
-		
+		c=2;
+	}
 	//_______________________________________________________________
 	System.out.println("5)");
 	 for(int i=0;i<m.length;i++){
