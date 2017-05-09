@@ -20,7 +20,9 @@ public class Matriz {
 		0 1 1 0 1
 		*/
 				
-		//coluna 1			//coluna2			//coluna 3			//coluna 4			//coluna 5
+		//coluna 1//coluna2//coluna 3//coluna 4//coluna 5
+		
+		
 		matriz[0][0]=0;		matriz[0][1]=0; 	matriz[0][2]=0;		matriz[0][3]=0; 	matriz[0][4]=0;						 
 		matriz[1][0]=0; 	matriz[1][1]=0;		matriz[1][2]=0;		matriz[1][3]=1; 	matriz[1][4]=0;
 		matriz[2][0]=1;		matriz[2][1]=0;		matriz[2][2]=0;		matriz[2][3]=0; 	matriz[2][4]=0;
@@ -33,20 +35,62 @@ public class Matriz {
 		
 		
 	}
+	//---------------------------------------------------------------------------------------------
 	
 	void mostraMatriz(){
 		
 		System.out.println("\nA Matriz ficou: \n");
         for(int linha=0 ; linha < 9 ; linha++){
-            for(int coluna = 0; coluna < 5 ; coluna ++){
-                System.out.printf("\t %d \t",matriz[linha][coluna]);
+            for(int coluna = 0; coluna < 5 ; coluna++){
+            	
+                System.out.printf(" %d ",matriz[linha][coluna]);
+                
+                
             }
             System.out.println();
         }
+  
 		
 	}
+	//---------------------------------------------------------------------------------------------
 	
+	void quantidadeDeUm(){
+		int cont1 = 0;
+		for(int linha=0 ; linha < 9 ; linha++){
+			
+			for(int coluna = 0; coluna < 5 ; coluna++){
+            	
+            	if(matriz[linha][coluna]==1){
+            		cont1 = cont1 + 1;
+            	}
+			}
+		}
+		System.out.println("\nQuantidade de 1: "+cont1);
+    			
+		
+	}
+	//---------------------------------------------------------------------------------------------
+
 	void numeroDeIlhas(){
+		
+		int contIlha = 0;
+		
+		
+		for(int linha=0 ; linha < 9 ; linha++){
+			
+		
+    	
+			
+			for(int coluna = 0; coluna < 5 ; coluna++){
+            	
+			}
+            
+            
+        }
+		 
+		
+		System.out.println("\nQuantidade de ilhas: "+contIlha);
+		
 		
 	}
 	
