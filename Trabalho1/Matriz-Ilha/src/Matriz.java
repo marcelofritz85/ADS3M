@@ -71,28 +71,43 @@ public class Matriz {
 	}
 	//---------------------------------------------------------------------------------------------
 
-	void numeroDeIlhas(){
-		
-		int contIlha = 0;
-		
-		
-		for(int linha=0 ; linha < 9 ; linha++){
-			
-		
-    	
-			
-			for(int coluna = 0; coluna < 5 ; coluna++){
-            	
-			}
-            
-            
+
+	public int numeroDeIlha() {
+        int count = 0;
+        if (matriz == null || matriz.length == 0) {
+            return count;
         }
-		 
-		
-		System.out.println("\nQuantidade de ilhas: "+contIlha);
-		
-		
-	}
+        int[][] tempMatriz = matriz.clone();
+        for (int i = 0; i < tempMatriz.length; i++) {
+            for (int j = 0; j < tempMatriz[i].length; j++) {
+                if (ilhaDetectada(tempMatriz, false, i, j, matriz.length - 1, matriz[i].length - 1)) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+	
+	//---------------------------------------------------------------------------------------------
+
+    private boolean ilhaDetectada(int[][] tempMatriz,
+                                 boolean ilhaDetectada,
+                                 int i,
+                                 int j,
+                                 int iMax,
+                                 int jMax) {
+        if (i > iMax || j > jMax || i < 0 || j < 0 || tempMatriz[i][j] == 0) {
+            return ilhaDetectada;
+        } else {
+            tempMatriz[i][j] = 0;
+            ilhaDetectada = true;
+            ilhaDetectada(tempMatriz, ilhaDetectada, i - 1, j, iMax, jMax);
+            ilhaDetectada(tempMatriz, ilhaDetectada, i, j - 1, iMax, jMax);
+            ilhaDetectada(tempMatriz, ilhaDetectada, i + 1, j, iMax, jMax);
+            ilhaDetectada(tempMatriz, ilhaDetectada, i, j + 1, iMax, jMax);
+        }
+        return ilhaDetectada;
+    }
 	
 	
 

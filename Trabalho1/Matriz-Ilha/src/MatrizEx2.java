@@ -10,7 +10,9 @@ public class MatrizEx2 {
       vai.criaMatriz();
       vai.mostraMatriz();
       vai.quantidadeDeUm();
-      vai.numeroDeIlhas();
+      
+      System.out.println("\nQuantidade de ilhas: "+vai.numeroDeIlha());
+      
       
         
         
